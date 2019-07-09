@@ -15,13 +15,80 @@
 
 ___
 
-#Bichomon
+# Bichomon
 
-Esta aplicación web fue creada
-
+Esta aplicación web fue creada pensando en los jugadores amateurs de pokemon, ya que el juego es algo reciente y el fénomeno pokemon fue algo que estalló hace ya varios años, nos dimos cuenta a través de encuestas entre un publico general de **POKEMON GO** que son muchos los jugadores jóvenes, en edades entre los 12 y 16, que se han sumado recientemente a la tendencia y que nunca vieron la serie, por lo tanto no manejan tanto conocimiento sobre los pokemons y sus características generales y básicas, algo que los deja en desventeja frente a otros jugadores más experimentados, además de ser un obstaculo a la hora de socializar entre las redes de jugadores. Notamos mucho interés por lo tanto, en una app que pudiese brindarles esos datos de forma rápida, practica y llamativa. 
 
 ___
-## Test de Usuario 
+
+## Encuesta para definir público objetivo de la aplicación8798
+___
+
+## Primer sketch de la aplicación web
+
+![](img/sketch-pokemon-1.png)
+
+![](img/sketch-pokemon-2.png)
+
+![](img/sketch-pokemon-3.png)
+
+![](img/sketch-pokemon-4.png)
+
+___
+
+## Test de Usabilidad 1
+
+Este es un test de usabilidad general, la idea es aplicarlo con el formato sketch de nuestro prototipo, los aspectos que tratará nuestra prueba son los siguientes:
+
+•Contenido
+•Navegación
+
+### Objetivo
+
+Esta es una prueba temprana en el proceso de desarrollo de la aplicación web, la diseñamos para detectar de forma sencilla y rápida, posibles fallas de usabilidad en el diseño y la navegación, y poder replantear la aplicación de ser necesario, sin incurrir en tanto trabajo, como aún es un prototipo de baja fidelidad, será un testeo rápido que solo se enfocara en los contenidos generales de las interacciones que ofrecen los botones y filtros y la navegación general del sitio web.
+
+#### Preguntas sobre Contenido
+
+Estas preguntas se harán antes de tener interacción con la app y luego de tenerla, estan enfocadas a descubrir si el usuario objetivo de nuestra aplicación logra identificar claramente el contenido de la página, el contenido que ofrece y que nos de feedback sobre su valoración de este contenido.
+
+#### Preguntas sobre Navegación
+
+Estas preguntas estan enfocadas en reunir información sobre la experiencia de nuestro usuario objetivo respecto a la navegación y usabilidad de nuestra aplicación web.
+
+___
+
+**Prueba de usabilidad**
+
+Entrevistador: 
+Fecha:
+Sitio Web: 
+
+**NOTA para la aplicación prueba:** 
+•Entregar todas las instrucciones de forma simple y repetitiva. 
+•Mantener una actitud paciente con el usuario, evitando “caras” de impaciencia, enojo, preocupación o cualquier gesto que haga sentir mal o presionado al usuario 
+•Anotar todo lo posible 
+•Aparte de las instrucciones necesarias para completar la prueba, no se deben entregar pistas al usuario de lo que tiene que hacer cuando interactúe con el prototipo de la aplicación web. 
+
+**Presentación del usuario**
+1. ¿Cuál es tu nombre?, ¿Que edad tienes?
+2. ¿Hace cuanto juegas **POKEMON GO**?
+3. ¿En que nivel considerarías que estas si pudieras escoger entre principiante, medio o experimentado?
+
+#### Preguntas sobre Contenido
+*estas preguntas se realizaran luego de que el usuario observe la pantalla inicial y antes de que interactue con el prototipo de la app*
+
+1. ¿Cual crees que es el objetivo del sitio web luego de darle un primer vistazo?
+2. ¿Que opinas del contenido que te ofrecen los botones de la aplicación?, ¿Lo consideras relevante para ti como jugador?
+
+#### Preguntas sobre Navegación
+*estas preguntas se deben realizar luego de que el usuario ya navegó a través de la página, a su ritmo, sin intervenciones del entrevistador*
+
+1. ¿La información que te ofrecen los textos de los botones tiene concordancia con las funciones que estos ejecutan?
+2. ¿lograste entender fácilmente como acceder a las interacciones que te proponía la página?
+3. ¿Que podrías decirnos respecto a tu experiencia navegando a través de la página?
+
+___
+## Test de Usabilidad 2
 
 El test de usabilidad se enfocará en los aspectos que consideramos como más relevantes para obtener una visión integral de la funcionalidad de nuestra aplicación web, estos aspectos son los siguientes:
     
@@ -64,7 +131,7 @@ Para esto la pregunta 1 y 2 apuntan a obtener información general sobre la rele
 
 ___
 
-Test de Usabilidad
+**Prueba de Usabilidad**
 
 Entrevistador: 
 Fecha:
@@ -88,7 +155,7 @@ Sitio Web:
   Queremos  comentarte  antes  de  comenzar  con  las  preguntas  sobre  el  sitio  mismo, que es probable que no puedas completar todas las acciones requeridas, ya que es una aplicación web en desarrollo, si esto ocurre, quiere decir que necesitamos perfeccionar ciertos detalles, por lo tanto tu ayuda y feedback es muy importante para nosotras.   La   prueba   tiene   una   duración   máxima   de   30   minutos   aproximadamente. Te pedimos que  durante  las  acciones  que  desarrolles,  vayas manifestando  en  voz  alta  lo  que  estes  pensando  con  el  fin  de  que  podamos  entender  qué  te  sugiere la interacción con  cada  pantalla.  Las preguntas que surjan en la navegación sólo las podremos responder al final de la prueba, esto para no influenciar los resultados.
 
 #### Identidad
-*estas preguntas se realizaran luego de que el usuario observe la pantalla inicial y antes de ue interactue con cualquier función de la página*
+*estas preguntas se realizaran luego de que el usuario observe la pantalla inicial y antes de que interactue con cualquier función de la página*
 
 1. ¿Con la información entregada en la pantalla, puedes identificar con que marca o corporación se relaciona la aplicación web? ¿Como lo sabes?
 2. ¿Viste algún elemento gráfico que te ayudara a llegar a esta conclusión?
