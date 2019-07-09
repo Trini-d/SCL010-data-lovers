@@ -22,7 +22,6 @@ function filterData(data, condition){
     
    }
    if(sortOrder == "Dsc"){
-    console.log("chau")
     function comparar(a,b){
       if(a[sortBy] > b[sortBy]){
         return -1;
@@ -39,17 +38,29 @@ function filterData(data, condition){
    let pokeMaxHeight = data[0];
    let pokeMinHeight =  data[0];
     let promHeight = 0;
+   
    for (let i = 0; i< data.length; i++){
-     let height = parseFloat(data[i].height.split(" ")[0])
-    promHeight += height;
+     let height = parseFloat(data[i].height.split(" ")[0]);
+  console.log(height);
+  
+     
+     (promHeight += height)/2;
+     
+     console.log((promHeight += height)/2);
+    /*console.log(promHeight += height);*/
     if(pokeMaxHeight.height < data[i].height){
       pokeMaxHeight = data[i];
+     /* console.log(pokeMaxHeight = data[i])*/
     }
     if(pokeMinHeight.height > data[i].height){
       pokeMinHeight = data[i];
     }
   }
-  prom = promHeight/data.length;
+  prom = (promHeight/data.length).toFixed(2);
+
+  /*console.log(prom);*/
+  
+  
   ans = {"maxHeight":pokeMaxHeight, "minHeight":pokeMinHeight, "prom":promHeight}
   return ans;
  }

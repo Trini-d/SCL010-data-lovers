@@ -7,9 +7,10 @@ let datos = POKEMON.pokemon;
 
   for (let i = 0; i< datos.length; i++){
 
-  let pokemonInfo = document.createElement("div");
-  pokemonInfo.id = "pokeInfo";
-  pokemonInfo.className = "pokeInfo";
+
+  let pokemonFrontInfo = document.createElement("div");
+  pokemonFrontInfo.id = "pokeFrontInfo";
+  pokemonFrontInfo.className = "pokeFrontCard";
 
   let pokemonName = document.createElement("p");
   pokemonName.textContent = datos[i].name;
@@ -21,22 +22,49 @@ let datos = POKEMON.pokemon;
   let pokemonId = document.createElement("p");
   pokemonId.textContent = datos[i].id;
 
-  pokemonInfo.appendChild(pokemonName);
-  pokemonInfo.appendChild(pokemonImagen);
-  pokemonInfo.appendChild(pokemonId);
+  
+  pokemonFrontInfo.appendChild(pokemonName);
+  pokemonFrontInfo.appendChild(pokemonImagen);
+  pokemonFrontInfo.appendChild(pokemonId);
 
-  document.getElementById("pokemon-container").appendChild(pokemonInfo).innerHTML;
+  document.getElementById("pokemon-container").appendChild(pokemonFrontInfo).innerHTML;
+
+
+  }
+/*
+for (let i = 0; i< datos.length; i++){
+
+  let pokemonBackInfo = document.createElement("div");
+  pokemonBackInfo.id = "pokeInfo";
+  pokemonBackInfo.className = "pokeCard";
+
+  let pokemonName = document.createElement("p");
+  pokemonName.textContent = datos[i].name;
+
+  let pokemonType = document.createElement("p");
+  pokemonType.textContent= "Tipo: " + datos[i].type;
+  pokemonType.className = "pokeType";
+
+  let pokemonWeaknesses= document.createElement("p");
+  pokemonWeaknesses.textContent = "Debilidades: " + datos[i].weaknesses;
+  pokemonWeaknesses.className = "pokeWeaknesses";
+
+  pokemonBackInfo.appendChild(pokemonName);
+  pokemonBackInfo.appendChild(pokemonType);
+  pokemonBackInfo.appendChild(pokemonWeaknesses);
+
+  document.getElementById("pokemon-container2").appendChild(pokemonBackInfo).innerHTML;
 
   
 }
-
+*/
 function cardInfo(datos){
   document.getElementById("pokemon-container").innerHTML = "";
   for (let i = 0; i< datos.length; i++){
 
-    let pokemonInfo = document.createElement("div");
-    pokemonInfo.id = "pokeInfo";
-    pokemonInfo.className = "pokeInfo";
+    let pokemonFrontInfo = document.createElement("div");
+    pokemonFrontInfo.id = "pokeFrontInfo";
+    pokemonFrontInfo.className = "pokeCard";
   
     let pokemonName = document.createElement("p");
     pokemonName.textContent = datos[i].name;
@@ -48,11 +76,12 @@ function cardInfo(datos){
     let pokemonId = document.createElement("p");
     pokemonId.textContent = datos[i].id;
   
-    pokemonInfo.appendChild(pokemonName);
-    pokemonInfo.appendChild(pokemonImagen);
-    pokemonInfo.appendChild(pokemonId);
+    pokemonFrontInfo.appendChild(pokemonName);
+    pokemonFrontInfo.appendChild(pokemonImagen);
+    pokemonFrontInfo.appendChild(pokemonId);
   
-    document.getElementById("pokemon-container").appendChild(pokemonInfo).innerHTML;
+    document.getElementById("pokemon-container").appendChild(pokemonFrontInfo).innerHTML;
+
     
   }
   stats = computeStats(datos)
@@ -60,11 +89,21 @@ function cardInfo(datos){
   ans += "Pokemon mas alto: "+stats["maxHeight"].name+" con "+stats["maxHeight"].height+"<br>"
   ans += "Pokemon mas bajo: "+stats["minHeight"].name+" con "+stats["minHeight"].height
   document.getElementById("stats").innerHTML = ans;
+  
+  
 }
 
-
+window.cardInfo = cardInfo;
 
 //DOM FUNCIÓN FILTRAR
+
+
+document.getElementById("test-button").addEventListener("click", ()=>{
+  document.getElementById("pokemon-container").value = cardInfo(allData);
+  });
+
+
+
 
 
 
@@ -75,30 +114,40 @@ document.getElementById("candies").addEventListener("change",() => {
  cardInfo(datos);
 })
 
-document.getElementById("primera-evolución").addEventListener("click", ()=>{
+
+document.getElementById("candies").addEventListener("change",() => {
+  let tipoFilter = document.getElementById("candies").value;
+  const condition = (pokemon => pokemon.egg == tipoFilter);
+  datos = filterData(allData, condition);
+  cardInfo(datos);
+ })
+
+
+
+document.getElementById("first-evolution").addEventListener("click", ()=>{
   const condition = (pokemon => pokemon.next_evolution && !pokemon.prev_evolution);
   datos = filterData(allData, condition);
  
   cardInfo(datos)
 });
 
-document.getElementById("segunda-evolución").addEventListener("click", ()=>{
+document.getElementById("second-evolution").addEventListener("click", ()=>{
   const condition = (pokemon => pokemon.prev_evolution && pokemon.prev_evolution.length == 1);
   datos = filterData(allData, condition);
  cardInfo(datos);
 });
 
-document.getElementById("tercera-evolución").addEventListener("click", ()=>{
+document.getElementById("third-evolution").addEventListener("click", ()=>{
   const condition = (pokemon => pokemon.prev_evolution && pokemon.prev_evolution.length == 2);
   datos = filterData(allData, condition);
  cardInfo(datos);
 });
 
-document.getElementById("alfabeto").addEventListener("change",() => {
-  let order = document.getElementById("alfabeto").value;
+document.getElementById("alphabet").addEventListener("change",() => {
+  let order = document.getElementById("alphabet").value;
   let lastResult = sortData(datos, "name", order);
   cardInfo(lastResult)
  });
-
+ 
 
 

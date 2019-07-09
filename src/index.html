@@ -21,32 +21,48 @@
       
   
 
-<article><button id="test-button" type="button" >Todos los Pokemons</button></article>
-<article><button id="primera-evolución" type="button" >Evolución 1</button></article>
-<article><button id="segunda-evolución" type="button" >Evolución 2</button></article>
-<article><button id="tercera-evolución" type="button" >Evolución 3</button></article>
+<article class = "first-button">
+<button id="test-button" type="button" class ="button" >Todos los Pokemons</button></article>
+<article> 
+<button id="first-evolution" type="button" class="button" >Evolución 1</button>
+<button id="second-evolution" type="button" class="button" >Evolución 2</button>
+<button id="third-evolution" type="button" class="button" >Evolución 3</button>
+</article>
 
-<select id ="candies" >
+<div id="select-group">
+<select id ="candies" class="filter">
   <option value="candies" hidden selected>Número de Candies</option>
   <option value="2 km">2 km</option>
   <option value="5 km">5 km</option>
   <option value="10 km">10 km</option>
 </select>
-<select id ="alfabeto" >
-    <option value="alfabeto" hidden selected>Orden Alfabético</option>
+<select id ="alphabet" class="filter">
+    <option value="alphabet" hidden selected>Orden Alfabético</option>
     <option value="Asc">Ascendente</option>
     <option value="Dsc">Descendente</option>
     
   </select>
+</div>
 
+<div class="flip-card">
+    <div class="flip-card-inner">
+      
+     
+    </div>
+</div>
 <div id="stats">
-  
+  <button id = "calculos"></button>
 </div>
 
 
 <section id= "pokemon-container">
   
 </section>
+
+
+<section id= "pokemon-container2">
+  
+  </section>
 
     <div id="root"></div>
    
