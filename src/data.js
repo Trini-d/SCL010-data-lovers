@@ -6,6 +6,7 @@ function filterData(data, condition){
   let result = data.filter(condition);
   return result;
  }
+filterData();
 
  function sortData(data, sortBy, sortOrder){
    //sortOrder = "Asc", "Dsc"
@@ -32,37 +33,56 @@ function filterData(data, condition){
      }
 
    }
-   return data.sort(comparar);
- }
- function computeStats(data){
-   let pokeMaxHeight = data[0];
-   let pokeMinHeight =  data[0];
-    let promHeight = 0;
    
+  return data.sort(comparar);
+   
+ }
+
+sortData();
+
+ function pokeProm(data){
+   
+    let promHeight = 0;
+    let sumHeight = 0;
+    let countHeight = 0;
    for (let i = 0; i< data.length; i++){
      let height = parseFloat(data[i].height.split(" ")[0]);
-  console.log(height);
-  
-     
-     (promHeight += height)/2;
-     
-     console.log((promHeight += height)/2);
-    /*console.log(promHeight += height);*/
-    if(pokeMaxHeight.height < data[i].height){
-      pokeMaxHeight = data[i];
-     /* console.log(pokeMaxHeight = data[i])*/
-    }
-    if(pokeMinHeight.height > data[i].height){
-      pokeMinHeight = data[i];
-    }
+     sumHeight = sumHeight + height;
+    
+     countHeight = countHeight + 1;
+
+    promHeight = (sumHeight/countHeight).toFixed(2);
+    
   }
-  prom = (promHeight/data.length).toFixed(2);
-
-  /*console.log(prom);*/
   
-  
-  ans = {"maxHeight":pokeMaxHeight, "minHeight":pokeMinHeight, "prom":promHeight}
-  return ans;
+ 
+  return promHeight;
  }
+pokeProm();
+
+ function pokeMaxHeight(data){
+  let pokeMaxHeight = data[0].height;
+  for (let i = 0; i< data.length; i++){
+    if(pokeMaxHeight < data[i].height){
+      pokeMaxHeight = data[i].height;
+      
+       }
+  }
+
+return pokeMaxHeight;
+}
+pokeMaxHeight();
 
 
+function pokeMinHeight(data){
+  let pokeMinHeight = data[0].height;
+  for (let i = 0; i< data.length; i++){
+    if(pokeMinHeight > data[i].height){
+      pokeMinHeight = data[i].height;
+      
+       }
+  }
+
+return pokeMinHeight;
+}
+pokeMinHeight();

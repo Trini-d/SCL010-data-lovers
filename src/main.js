@@ -2,7 +2,8 @@
 
 const allData = POKEMON.pokemon;
 let datos = POKEMON.pokemon;
- 
+
+
 
 
   for (let i = 0; i< datos.length; i++){
@@ -20,7 +21,7 @@ let datos = POKEMON.pokemon;
   pokemonImagen.className = "pokeImagen";
 
   let pokemonId = document.createElement("p");
-  pokemonId.textContent = datos[i].id;
+  pokemonId.textContent = "# "+ datos[i].id;
 
   
   pokemonFrontInfo.appendChild(pokemonName);
@@ -74,7 +75,7 @@ function cardInfo(datos){
     pokemonImagen.className = "pokeImagen";
   
     let pokemonId = document.createElement("p");
-    pokemonId.textContent = datos[i].id;
+    pokemonId.textContent = "# "+ datos[i].id;
   
     pokemonFrontInfo.appendChild(pokemonName);
     pokemonFrontInfo.appendChild(pokemonImagen);
@@ -84,26 +85,25 @@ function cardInfo(datos){
 
     
   }
-  stats = computeStats(datos)
-  ans =  "Promedio de altura: "+stats["prom"]+"<br>";
-  ans += "Pokemon mas alto: "+stats["maxHeight"].name+" con "+stats["maxHeight"].height+"<br>"
-  ans += "Pokemon mas bajo: "+stats["minHeight"].name+" con "+stats["minHeight"].height
-  document.getElementById("stats").innerHTML = ans;
   
+
+  
+ 
   
 }
 
-window.cardInfo = cardInfo;
+
+/*window.cardInfo = cardInfo;*/
+
 
 //DOM FUNCIÓN FILTRAR
 
 
 document.getElementById("test-button").addEventListener("click", ()=>{
   document.getElementById("pokemon-container").value = cardInfo(allData);
+  
+
   });
-
-
-
 
 
 
@@ -111,7 +111,9 @@ document.getElementById("candies").addEventListener("change",() => {
  let tipoFilter = document.getElementById("candies").value;
  const condition = (pokemon => pokemon.egg == tipoFilter);
  datos = filterData(allData, condition);
+
  cardInfo(datos);
+
 })
 
 
@@ -127,20 +129,39 @@ document.getElementById("candies").addEventListener("change",() => {
 document.getElementById("first-evolution").addEventListener("click", ()=>{
   const condition = (pokemon => pokemon.next_evolution && !pokemon.prev_evolution);
   datos = filterData(allData, condition);
- 
+  const pokeMaxHeight = window.pokeMaxHeight(datos);
+  document.getElementById("pokeMaxHeight").innerHTML = "El Pokemon mas alto es " + window.pokeMaxHeight(datos);
+  const pokeProm = window.pokeProm(datos);
+  document.getElementById("pokeProm").innerHTML = "El promedio de altura de los Pokemones es " + window.pokeProm(datos);
+  const pokeMinHeight = window.pokeMinHeight(datos);
+  document.getElementById("pokeMinHeight").innerHTML = "El Pokemon mas bajo es " + window.pokeMinHeight(datos);
   cardInfo(datos)
 });
 
 document.getElementById("second-evolution").addEventListener("click", ()=>{
   const condition = (pokemon => pokemon.prev_evolution && pokemon.prev_evolution.length == 1);
   datos = filterData(allData, condition);
- cardInfo(datos);
+  const pokeMaxHeight = window.pokeMaxHeight(datos);
+  document.getElementById("pokeMaxHeight").innerHTML = "El Pokemon mas alto es " + window.pokeMaxHeight(datos);
+  const pokeProm = window.pokeProm(datos);
+  document.getElementById("pokeProm").innerHTML = "El promedio de altura de los Pokemones es " + window.pokeProm(datos);
+  const pokeMinHeight = window.pokeMinHeight(datos);
+  document.getElementById("pokeMinHeight").innerHTML = "El Pokemon mas bajo es " + window.pokeMinHeight(datos);
+  cardInfo(datos)
+ 
 });
 
 document.getElementById("third-evolution").addEventListener("click", ()=>{
   const condition = (pokemon => pokemon.prev_evolution && pokemon.prev_evolution.length == 2);
   datos = filterData(allData, condition);
- cardInfo(datos);
+  const pokeMaxHeight = window.pokeMaxHeight(datos);
+  document.getElementById("pokeMaxHeight").innerHTML = "El Pokemon mas alto es " + window.pokeMaxHeight(datos);
+  const pokeProm = window.pokeProm(datos);
+  document.getElementById("pokeProm").innerHTML = "El promedio de altura de los Pokemones es " + window.pokeProm(datos);
+  const pokeMinHeight = window.pokeMinHeight(datos);
+  document.getElementById("pokeMinHeight").innerHTML = "El Pokemon mas bajo es " + window.pokeMinHeight(datos);
+  cardInfo(datos)
+ 
 });
 
 document.getElementById("alphabet").addEventListener("change",() => {

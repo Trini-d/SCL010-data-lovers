@@ -9,50 +9,57 @@
   </head>
   <body>
 <!--título de la aplicación--> 
-  <article>
     <header>
-      <h1>BICHOMON</h1>
-
+       <div id="logo-container">
+        <img id="logo" src="img/pokelogo.png" alt="">
+        <img id="pokebola" src="img/pokebola.png" alt="">
+        
+      </div>
      
     </header>
-  </article>
-
-
-      
   
 
-<article class = "first-button">
-<button id="test-button" type="button" class ="button" >Todos los Pokemons</button></article>
-<article> 
-<button id="first-evolution" type="button" class="button" >Evolución 1</button>
-<button id="second-evolution" type="button" class="button" >Evolución 2</button>
-<button id="third-evolution" type="button" class="button" >Evolución 3</button>
+<article class="first-button">
+<button id="test-button" type="button" class="button">POKEDEX</button>   
+</article>
+<article>  
+  <div >
+<button id="first-evolution" type="button" class="button">Evolución 1</button> </div>
+<button id="second-evolution" type="button" class="button">Evolución 2</button> 
+<button id="third-evolution" type="button" class="button">Evolución 3</button> 
 </article>
 
-<div id="select-group">
-<select id ="candies" class="filter">
-  <option value="candies" hidden selected>Número de Candies</option>
-  <option value="2 km">2 km</option>
-  <option value="5 km">5 km</option>
-  <option value="10 km">10 km</option>
-</select>
-<select id ="alphabet" class="filter">
-    <option value="alphabet" hidden selected>Orden Alfabético</option>
-    <option value="Asc">Ascendente</option>
-    <option value="Dsc">Descendente</option>
-    
-  </select>
+
+<div class="select-group">
+    <select id ="candies" class="filter">
+      <option value="candies" hidden selected>Distancia eclosión</option>
+      <option value="2 km">2 km</option>
+      <option value="5 km">5 km</option>
+      <option value="10 km">10 km</option>
+    </select>
+    <select id ="alphabet" class="filter">
+        <option value="alphabet" hidden selected>Orden Alfabético</option>
+        <option value="Asc">Ascendente</option>
+        <option value="Dsc">Descendente</option>          
+      </select>
 </div>
 
-<div class="flip-card">
-    <div class="flip-card-inner">
-      
-     
-    </div>
-</div>
+
+
 <div id="stats">
-  <button id = "calculos"></button>
+  <p id="pokeMaxHeight"></p>
+  <p id="pokeMinHeight"></p>
+  <p id="pokeProm"></p>
+  <p></p>
 </div>
+
+
+
+
+
+
+
+
 
 
 <section id= "pokemon-container">
@@ -60,10 +67,8 @@
 </section>
 
 
-<section id= "pokemon-container2">
   
   </section>
-
     <div id="root"></div>
    
     <script src="./data/pokemon/pokemon.js"></script> 

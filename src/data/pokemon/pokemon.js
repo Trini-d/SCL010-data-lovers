@@ -4085,4 +4085,4 @@ const POKEMON = {
   }]
 }
 ;;
-window.POKEMON = POKEMON.pokemon;
+window.POKEMON = POKEMON;
