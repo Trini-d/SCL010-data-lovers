@@ -5,7 +5,7 @@ let datos = POKEMON.pokemon;
 
 
 
-
+//recorrer la data
   for (let i = 0; i< datos.length; i++){
 
 
@@ -15,11 +15,11 @@ let datos = POKEMON.pokemon;
 
   let pokemonName = document.createElement("p");
   pokemonName.textContent = datos[i].name;
-
+//traer la imgane de cada pokemon desde la data e imprimirla en la carta
   let pokemonImagen = document.createElement("img");
   pokemonImagen.src = datos[i].img;
   pokemonImagen.className = "pokeImagen";
-
+//traer el id de cada pokemon desde la data e imprimirlo en la data
   let pokemonId = document.createElement("p");
   pokemonId.textContent = "# "+ datos[i].id;
 
@@ -60,6 +60,7 @@ for (let i = 0; i< datos.length; i++){
 }
 */
 function cardInfo(datos){
+ //vaciar el contenedor de los elementos para que pueda recibir la nueva data 
   document.getElementById("pokemon-container").innerHTML = "";
   for (let i = 0; i< datos.length; i++){
 
@@ -69,11 +70,11 @@ function cardInfo(datos){
   
     let pokemonName = document.createElement("p");
     pokemonName.textContent = datos[i].name;
-  
+//traer la imagen de cada pokemon a la pokecarta  
     let pokemonImagen = document.createElement("img");
     pokemonImagen.src = datos[i].img;
     pokemonImagen.className = "pokeImagen";
-  
+//traer el id de cada pokemon a la pokecarta  
     let pokemonId = document.createElement("p");
     pokemonId.textContent = "# "+ datos[i].id;
   
