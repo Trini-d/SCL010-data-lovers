@@ -8,13 +8,13 @@ ___
 
 ## Primer sketch de la aplicación web
 
-![](img/sketch-pokemon-1.png)
+![](img/sketch-pokemon-1.jpeg)
 
-![](img/sketch-pokemon-2.png)
+![](img/sketch-pokemon-2.jpeg)
 
-![](img/sketch-pokemon-3.png)
+![](img/sketch-pokemon-3.jpeg)
 
-![](img/sketch-pokemon-4.png)
+![](img/sketch-pokemon-4.jpeg)
 
 ___
 
