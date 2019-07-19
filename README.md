@@ -8,7 +8,7 @@ ___
 
 ## Encuesta para investigación de público objetivo
 
-[Formulario de encuesta]("https://docs.google.com/forms/d/e/1FAIpQLSdJP1mBGQlU6KihE_iwmc89ldPy1AU4IgfWLyOt3Zwc5YvCSA/viewform")
+[Formulario de encuesta](https://docs.google.com/forms/d/e/1FAIpQLSdJP1mBGQlU6KihE_iwmc89ldPy1AU4IgfWLyOt3Zwc5YvCSA/viewform)
 
 **Resultados de la encuesta**
 

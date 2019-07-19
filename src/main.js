@@ -1,6 +1,5 @@
 
 
-
 const allData = POKEMON.pokemon;
 let datos = POKEMON.pokemon;
 
