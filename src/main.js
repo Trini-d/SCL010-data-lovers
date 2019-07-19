@@ -1,5 +1,6 @@
 
 
+
 const allData = POKEMON.pokemon;
 let datos = POKEMON.pokemon;
 
@@ -19,7 +20,7 @@ let datos = POKEMON.pokemon;
   let pokemonImagen = document.createElement("img");
   pokemonImagen.src = datos[i].img;
   pokemonImagen.className = "pokeImagen";
-//traer el id de cada pokemon desde la data e imprimirlo en la data
+//traer el id de cada pokemon desde la data e imprimirlo en la carta
   let pokemonId = document.createElement("p");
   pokemonId.textContent = "# "+ datos[i].id;
 
@@ -32,33 +33,7 @@ let datos = POKEMON.pokemon;
 
 
   }
-/*
-for (let i = 0; i< datos.length; i++){
 
-  let pokemonBackInfo = document.createElement("div");
-  pokemonBackInfo.id = "pokeInfo";
-  pokemonBackInfo.className = "pokeCard";
-
-  let pokemonName = document.createElement("p");
-  pokemonName.textContent = datos[i].name;
-
-  let pokemonType = document.createElement("p");
-  pokemonType.textContent= "Tipo: " + datos[i].type;
-  pokemonType.className = "pokeType";
-
-  let pokemonWeaknesses= document.createElement("p");
-  pokemonWeaknesses.textContent = "Debilidades: " + datos[i].weaknesses;
-  pokemonWeaknesses.className = "pokeWeaknesses";
-
-  pokemonBackInfo.appendChild(pokemonName);
-  pokemonBackInfo.appendChild(pokemonType);
-  pokemonBackInfo.appendChild(pokemonWeaknesses);
-
-  document.getElementById("pokemon-container2").appendChild(pokemonBackInfo).innerHTML;
-
-  
-}
-*/
 function cardInfo(datos){
  //vaciar el contenedor de los elementos para que pueda recibir la nueva data 
   document.getElementById("pokemon-container").innerHTML = "";
@@ -100,11 +75,14 @@ function cardInfo(datos){
 //DOM FUNCIÓN FILTRAR
 
 
+
+
+
 document.getElementById("test-button").addEventListener("click", ()=>{
   document.getElementById("pokemon-container").value = cardInfo(allData);
   
 
-  });
+});
 
 
 
@@ -123,7 +101,7 @@ document.getElementById("candies").addEventListener("change",() => {
   const condition = (pokemon => pokemon.egg == tipoFilter);
   datos = filterData(allData, condition);
   cardInfo(datos);
- })
+})
 
 
 
