@@ -712,7 +712,7 @@ ___
 ![](img/paleta-de-colores.png)
 ___
 
-## Descisiones de Diseño
+## Decisiones de Diseño
 
 A partir de nuestras conclusiones al segundo testeo de usabilidad aplicado a nuestro MVP, decidimos cambiar el diseño de nuestro contenedor de cartas pokemon (pokemon container) para que se asemejara a cartas pokemon, para esto decidimos darle un marco de borde redondeado que asemejara a una carta, y separarlas, también para asemejar a cartas dispuestas sobre una mesa. En cuanto a priorizar el tiempo decidimos que las cartas ya no se mostrarían en un modal aparte, esto también considerando que al tomar esta decisión no estabamos perdiendo de mostrar ningún dato relevante, ya que el modal solo ampliaba la imagen, y por la parte trasera mostraba datos de peso y estatura que todos los usuarios del segundo test catalogaron de irrelevantes para jugar en la aplicación en sí. 
 
